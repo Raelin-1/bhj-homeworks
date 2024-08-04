@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (timeLeft <= 0) {
             clearInterval(countDown);
-            let message = 'Вы победили в конкурсе!';
+            let message = "Вы победили в конкурсе!";
             alert(message);
             let text = message;
             downloadAsFile(text);
