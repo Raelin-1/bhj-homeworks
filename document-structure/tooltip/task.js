@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Append the tooltip to the body
             document.body.appendChild(tooltipElement);
 
+            const rect = tooltip.getBoundingClientRect();
+            tooltipElement.style.left = `${rect.left + window.pageXOffset}px`;
+            tooltipElement.style.top = `${rect.bottom + window.pageYOffset}px`;
+
+            activeTooltip = tooltipElement;
+
             // Click outside to close the tooltip
             document.addEventListener('click', (e) => {
                 if (!tooltip.contains(e.target) && !tooltipElement.contains(e.target)) {
