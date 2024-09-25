@@ -4,7 +4,7 @@ let file = document.getElementById("file");
 
 document.forms.form.onsubmit = function () {
   let input = this.elements.file;
-  var file = input.files[0];
+  let file = input.files[0];
   if (file) {
     upload(file);
   }
